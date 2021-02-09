@@ -10,18 +10,18 @@
  */
 
 function render(frequencyArray, ctx, centerX, centerY) {
-	ctx.fillStyle = 'rgba(255, 255, 255, 0.21)'
-	ctx.fillRect(0, 0, 300, 300)
+	ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'
+	ctx.fillRect(0, 0, 500, 500)
 	ctx.fill()
 
 	const bars = frequencyArray.length 
-	const colorStep = 360 / bars
+	const colorStep = 598 / bars
 	const pi2 = Math.PI * 2
 
 	// Draw circles centered in canvas
 	frequencyArray.forEach((f, i) => {
 		// scale f to 0 - 300
-		const radius = f / 255 * 300
+		const radius = f / 425 * 500
 		// Begin a new path
 		ctx.beginPath()
 		// Draw a circle of radius

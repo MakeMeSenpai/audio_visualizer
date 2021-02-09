@@ -12,7 +12,7 @@ Real Time data: Audio Visualizer.
 
 Your Goal create an audio visualizer with JavaScript. You'll be drawing audio data onto canvas with JavaScript. The audio analyzer provides an array of 1024 8 bit integers. Your job is to turn these into something that can be drawn on canvas. The values represent the magnitude of a audio at one of 1024 frequency bands. 
 
-Frequncy band is represented as the index in the array for each value. At each frquency band you will also have a value of 0 to 255. 
+Frequency band is represented as the index in the array for each value. At each frequency band you will also have a value of 0 to 255. 
 
 On canvas you will be displaying pixels. You can draw them at an x and y coordinate, and you can set the color. You can draw shapes like lines, circles and rectangles. These might have a location positioned at an x and y, and might have a length, width, and height.
 
@@ -22,7 +22,7 @@ The repo contains HTML and JS files along with a couple sample sound files. Sinc
 
 ## Editing the code 
 
-This project is setup to run from `index.html`. The main program is in `main.js`. The rendering process that vidsualizes the audio is broken up into separate modules. I've included a few sample renderers. You goal is to make your own renderer. 
+This project is setup to run from `index.html`. The main program is in `main.js`. The rendering process that visualizes the audio is broken up into separate modules. I've included a few sample renderers. You goal is to make your own renderer. 
 
 Each rendering module is a function that takes the frequency array and canvas context as arguments. Sometimes there are other arguments if needed. Take a look at the comments in each of these files for notes. 
 
@@ -31,13 +31,13 @@ Each rendering module is a function that takes the frequency array and canvas co
 Try this: 
 
 - Open the visualization in your browser. You'll need to use a local server. Live Server plug in for VSCode is a good choice. 
-- Press the play, button listen to the audio and watch the visualization. Notice the red lines draw out from the circle in the center. The lines start at 3:00. This is the lowest frequency. As frquencies get higher the lines are drawn outward from angles clockwise around the circle. 
+- Press the play, button listen to the audio and watch the visualization. Notice the red lines draw out from the circle in the center. The lines start at 3:00. This is the lowest frequency. As frequencies get higher the lines are drawn outward from angles clockwise around the circle. 
 
-The length of the lines is determined by the audio frquency data. The position around the circle or angle of the line is determined by the index of the value. 
+The length of the lines is determined by the audio frequency data. The position around the circle or angle of the line is determined by the index of the value. 
 
 **Challenge 2** Modify the HTML and CSS that presents the visualizer. Design the page.
 
-Try this: Change the size of the canvas. Find the cavas tag and change the `width` and `height` values. 
+Try this: Change the size of the canvas. Find the canvas tag and change the `width` and `height` values. 
 
 The circle isn't centered because the code draws based on the 300 value. This will need to be adjusted in the code. 
 
@@ -61,8 +61,8 @@ Uncomment `circleGridRenderer(frequencyArray, ctx, 300, 300)`. The last two para
 
 The `circleGridRenderer` render draws the frequency data as a grid of circles. Using the index and frequency value for: 
 
-- index - determines the color low frequencies are red. As the colors get higher in frequency tthey move around the color wheel
-- index - determines position of each circle. Low frequency starts in the upper left. High frqeuncies move to the lower right. 
+- index - determines the color low frequencies are red. As the colors get higher in frequency they move around the color wheel
+- index - determines position of each circle. Low frequency starts in the upper left. High frequencies move to the lower right. 
 - value - the value of each frequency determines the size of the circles drawn at each position on the grid.
 
 **Challenge 4** Open `renderCircleGrid.js` take a look at the code. 
@@ -91,7 +91,7 @@ Try this: Change the radius of the small circles. Currently each frequency value
 
 | Expectation | Doe not meet | Meets | Exceeds |
 |:-------------|:------------------|:----------------|:-----------------|
-| **Completion** | Visualizer doesn't work or looks like the original tutorial | Visualizer works and has a unique appearance | Paterns displayed are fun and interesting, people comment when they see it. |
+| **Completion** | Visualizer doesn't work or looks like the original tutorial | Visualizer works and has a unique appearance | Patterns displayed are fun and interesting, people comment when they see it. |
 | **Code quality** | The code is sloppy and unorganized or throws errors and warnings | Code is well organized and works without errors | Shows no linter errors or warnings |
 
 Learning Objectives 
@@ -113,9 +113,3 @@ Learning Objectives
 This repo contains some starter code you can use to get started on your real time data exploration. 
 
 The code in this repo creates an audio visualizer built with JavaScript. 
-
-
-
-
-
- 

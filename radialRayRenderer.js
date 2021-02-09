@@ -6,8 +6,8 @@
 function render(frequencyArray, ctx, centerX, centerY, radius) {
 	// Clear the canvas
 	ctx.beginPath()
-	ctx.fillStyle = 'rgba(255, 255, 255, 0.21)'
-	ctx.fillRect(0, 0, 300, 300)
+	ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'
+	ctx.fillRect(0, 0, 500, 500)
 	ctx.fill()
 
 	// Draw the circle in the center
@@ -22,7 +22,7 @@ function render(frequencyArray, ctx, centerX, centerY, radius) {
 	// Loop over audio data
 	frequencyArray.forEach((f, i) => {
 		// calculate the length of the line
-		const barLength = f / 255 * bars
+		const barLength = f / 425 * bars
 		// calculate the starting x and y 
 		const x1 = (Math.cos(step * i) * radius) + centerX
 		const y1 = (Math.sin(step * i) * radius) + centerY
@@ -31,7 +31,7 @@ function render(frequencyArray, ctx, centerX, centerY, radius) {
 		const y2 = (Math.sin(step * i) * (radius + barLength)) + centerY
 
 		ctx.beginPath()
-		ctx.strokeStyle = `hsl(${360 / 1024 * i}, 100%, 50%)`
+		ctx.strokeStyle = `hsl(${598 / 1701 * i}, 100%, 50%)`
 		// Move to the starting x and y
 		ctx.moveTo(x1, y1)
 		// draw a line to the end x and y

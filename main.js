@@ -76,9 +76,9 @@ function startAudio() {
 // This function renders the audio to the canvas using a renderer
 function render() {
 
-	const centerX = 300 / 2
-	const centerY = 300 / 2
-	const radius = 300 / 5
+	const centerX = 495 / 2
+	const centerY = 500 / 2
+	const radius = 500 / 5
 	analyser.getByteFrequencyData(frequencyArray)
 	
 	// Use one of the renderers below 

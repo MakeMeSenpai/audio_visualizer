@@ -24,7 +24,7 @@ function render(frequencyArray, ctx, count, width, height) {
 	// Erase the screen by filling with white. Use a partially 
 	// transparent value so the last drawing leaves a trail
 	// Define the fillstyle 
-	ctx.fillStyle = 'rgba(255, 255, 255, 0.21)'
+	ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'
 	ctx.lineWidth = lineWidth
 	// Fill the canvas
 	ctx.fillRect(0, 0, width, height)
