@@ -26,12 +26,21 @@
       }
     </style>
   </head>
-  <body>
+  <body id="background">
 
     <canvas id="canvas" width="500" height="500"></canvas>
     
-    <button id="button-play">Play</button>
-    <button id="button-pause">Stop</button>
+    <fieldset>
+      <select id="select">
+        <option value="Bird">Bird</option>
+        <option value="Dog">Dog</option>
+        <option value="Hyena">Hyena</option>
+        <option value="Monke">Monke</option>
+        <option value="Fox">Fox</option>
+       </select>
+      <button id="button-play">Play</button>
+      <button id="button-pause">Stop</button>
+    </fieldset>
 
     <script src="main.js" type="module"></script>
   </body>

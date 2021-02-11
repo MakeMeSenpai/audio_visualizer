@@ -15,7 +15,7 @@ function render(frequencyArray, ctx, centerX, centerY) {
 	ctx.fill()
 
 	const bars = frequencyArray.length 
-	const colorStep = 598 / bars
+	const colorStep = 360 / bars 
 	const pi2 = Math.PI * 2
 
 	// Draw circles centered in canvas
@@ -26,7 +26,7 @@ function render(frequencyArray, ctx, centerX, centerY) {
 		ctx.beginPath()
 		// Draw a circle of radius
 		ctx.arc(centerX, centerY, radius, 0, pi2)
-		// set stroke color
+		// set stroke color 
 		ctx.strokeStyle = `hsla(${colorStep * i}, 100%, 50%, 0.1)`
 		// stroke path
 		ctx.stroke()
