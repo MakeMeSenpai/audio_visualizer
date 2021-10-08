@@ -1,4 +1,3 @@
-
 // Notes 
 // https://www.kkhaydarov.com/audio-visualizer/
 // https://medium.com/@duraraxbaccano/computer-art-visualize-your-music-in-javascript-with-your-browser-part-2-fa1a3b73fdc6
@@ -27,8 +26,14 @@ const ctx = canvas.getContext('2d')
 // ----------------------------------------------------------
 // Buttons 
 const select = document.getElementById('select')
+const customSound = document.getElementById('custom-sound')
+const clearFile = document.getElementById('clear-file')
 const playButton = document.getElementById('button-play')
 const pauseButton = document.getElementById('button-pause')
+
+clearFile.addEventListener('click', (e) => {
+	customSound.value = null
+})
 
 playButton.addEventListener('click', (e) => {
 	startAudio()
@@ -52,20 +57,32 @@ function startAudio() {
 	// make a new Audio Object
 	audio = new Audio()
 	// Get a context 
-	const audioContext = new (window.AudioContext || window.webkitAudioContext)()
-	
+	const audioContext = new(window.AudioContext || window.webkitAudioContext)()
+
 	// Define a source sound file
-	let animal = select.value
-	if (animal === "Bird") {
-		audio.src = './bird.wav'
-	} else if (animal === "Dog") {
-		audio.src = './dog.wav'
-	} else if (animal === "Hyena") {
-		audio.src = './hyena.wav'
-	} else if (animal === "Monke") {
-		audio.src = './monke.wav'
+	let animal = ""
+	console.log()
+
+	if (customSound.value === "") {
+		animal = select.value;
+		if (animal === "Bird") {
+			audio.src = './bird.wav'
+		} else if (animal === "Dog") {
+			audio.src = './dog.wav'
+		} else if (animal === "Hyena") {
+			audio.src = './hyena.wav'
+		} else if (animal === "Monke") {
+			audio.src = './monke.wav'
+		} else {
+			audio.src = './fox.wav'
+		}
 	} else {
-		audio.src = './fox.wav'
+		var fileReader = new FileReader();
+		fileReader.readAsDataURL(customSound.files[0]);
+		fileReader.onload = function(e) {
+			audio.src = e.target.result
+			console.log(("Filename: '" + customSound.files[0].name + "'"), ( "(" + ((Math.floor(customSound.files[0].size/1024/1024*100))/100) + " MB)" ));
+		}
 	}
 
 	// Make a new analyser
@@ -78,7 +95,7 @@ function startAudio() {
 	// Get an array of audio data from the analyser
 	frequencyArray = new Uint8Array(analyser.frequencyBinCount)
 	// console.log(frequencyArray.length)
-	
+
 	// Start playing the audio
 	audio.play()
 
@@ -119,4 +136,3 @@ function render() {
 	// Set up the next animation frame
 	requestAnimationFrame(render)
 }
-
