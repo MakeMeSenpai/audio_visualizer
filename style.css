@@ -1,0 +1,49 @@
+body,
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -50px;
+}
+
+div {
+    background-color: rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: xx-large;
+    background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -khtml-background-clip: text;
+    background-clip: text;
+}
+
+#canvas {
+    border: 1px solid;
+}
+
+button {
+    margin: 5px;
+    padding: 1em;
+    border-radius: 0.25em;
+    border: 1px solid;
+}
+
+footer {
+    position: fixed;
+    right: 15px;
+    bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

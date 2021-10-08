@@ -1,47 +1,54 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Audio Visualizer</title>
-    <style>
-      body, html {
-        height: 100%;
-      }
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
 
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO & Link Preview -->
+  <title>Audio Visualizer</title>
+  <meta property="og:title" name="twitter:title" itemprop="name" content="Audio Visualizer" />
+  <meta property="og:site_name" content="Audio Visualizer" />
+  <meta name="google-site-verification" content="mwDXPzrG7cNLhKq3BBg96YyDAFVqyi94KIoQ3HwucUY" />
+  <meta name="fb:app_id" content="1321416788276143" />
+  <meta property="og:image" name="twitter:image:scr" itemprop="image" content="https://i.imgur.com/Rxz9fGn.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="627" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image:alt" name="twitter:image:alt" content="snapshot" />
+  <meta property="og:type" content="Website" />
+  <meta property="keywords" content="Audio, Data, Visualizer, Anthony Protho, javascript, d3, coding" />
+  <meta property="og:description" name="twitter:description" content="Data Visualizer based on audio files, returning real time data as pretty rainbows. Coding project." />
+  <meta property='og:url' content='https://makemesenpai.github.io/audio_visualizer/' />
+  <meta name="author" content="Anthony S Protho">
+  <!-- Preload Static/Styles -->
+  <link href="./normalize.css" rel="stylesheet" type="text/css" />
+  <link href="./style.css" rel="stylesheet" type="text/css" />
+</head>
 
-      #canvas {
-        border: 1px solid;
-      }
+<body id="background">
+  <div>
+    <h1>Audio Visualizer</h1>
+  </div>
 
-      button {
-        margin: 5px;
-        padding: 1em;
-        border-radius: 0.25em;
-        border: 1px solid;
-      }
-    </style>
-  </head>
-  <body id="background">
+  <canvas id="canvas" width="500" height="500"></canvas>
 
-    <canvas id="canvas" width="500" height="500"></canvas>
-    
-    <fieldset>
-      <select id="select">
-        <option value="Bird">Bird</option>
-        <option value="Dog">Dog</option>
-        <option value="Hyena">Hyena</option>
-        <option value="Monke">Monke</option>
-        <option value="Fox">Fox</option>
-       </select>
-      <button id="button-play">Play</button>
-      <button id="button-pause">Stop</button>
-    </fieldset>
+  <fieldset>
+    <select id="select">
+      <option value="Bird">Bird</option>
+      <option value="Dog">Dog</option>
+      <option value="Hyena">Hyena</option>
+      <option value="Monke">Monke</option>
+      <option value="Fox">Fox</option>
+    </select>
+    <button id="button-play">Play</button>
+    <button id="button-pause">Stop</button>
+  </fieldset>
 
-    <script src="main.js" type="module"></script>
-  </body>
+  <footer>
+    <p>©2021 <a href="https://makemesenpai.github.io/Ant_World/">Anthony S. Protho</a></p>
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
