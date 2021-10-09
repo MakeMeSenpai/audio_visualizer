@@ -47,7 +47,7 @@ pauseButton.addEventListener('click', (e) => {
 // --------------------------------------------------------
 // Audio setup
 
-// Defime some variables 
+// Define some variables 
 let analyser
 let frequencyArray
 let audio

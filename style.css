@@ -1,9 +1,5 @@
-body,
-html {
-    height: 100%;
-}
-
 body {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,11 +26,24 @@ h1 {
     border: 1px solid;
 }
 
+select {
+    height: 37px;
+    transform: translateY(-10px);
+}
+
+span {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 15px;
+    height: 37px;
+}
+
 button {
     margin: 5px;
     padding: 1em;
     border-radius: 0.25em;
     border: 1px solid;
+    transform: translateY(-10px);
 }
 
 footer {
@@ -46,4 +55,76 @@ footer {
 a {
     text-decoration: none;
     color: black;
+}
+
+/* phone sizes */
+@media (max-width: 540px) {
+    body {
+        transform: scale(0.5);
+    }
+
+    fieldset {
+        width: 385px;
+        transform: scale(1.25) translateY(50px);
+    }
+
+    select {
+        height: 50px;
+        transform: translateY(-21px);
+    }
+
+    span {
+        margin-left: 15px;
+    }
+
+    button {
+        margin: auto;
+        transform: translateX(125px);
+    }
+
+    footer {
+        position: relative;
+        right: -232px;
+        bottom: -321px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 823px) {
+    h1 {
+        transform: translateY(200px) scale(0.75);
+    }
+
+    canvas {
+        transform: translateY(50px) scale(0.45);
+    }
+
+    fieldset {
+        transform: translateY(-100px) scale(0.75);
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+/* galaxy fold fix */
+@media (orientation: landscape) and (width: 653px) and (height: 280px) {
+    canvas {
+        transform: translateY(40px) scale(0.45);
+    }
+
+    fieldset {
+        transform: translateY(-115px) scale(0.75);
+    }
+}
+
+/* nest hub  fix */
+@media (orientation: landscape) and (min-width: 717px) and (max-width: 1366px) {
+    h1 {
+        transform: translateY(100px) scale(0.75);
+    }
+
+    canvas {
+        transform: translateY(32px) scale(0.75);
+    }
 }
