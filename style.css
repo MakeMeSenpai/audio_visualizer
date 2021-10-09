@@ -27,7 +27,13 @@ h1 {
 }
 
 select {
+    -moz-height: 37px;
+    -webkit-height: 37px;
+    -khtml-height: 37px;
     height: 37px;
+    -moz-transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -khtml-transform: translateY(-10px);
     transform: translateY(-10px);
 }
 
@@ -35,14 +41,23 @@ span {
     display: inline-block;
     margin-top: 15px;
     margin-left: 15px;
+    -moz-height: 37px;
+    -webkit-height: 37px;
+    -khtml-height: 37px;
     height: 37px;
 }
 
 button {
     margin: 5px;
     padding: 1em;
+    -moz-border-radius: 0.25em;
+    -webkit-border-radius: 0.25em;
+    -khtml-border-radius: 0.25em;
     border-radius: 0.25em;
     border: 1px solid;
+    -moz-transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -khtml-transform: translateY(-10px);
     transform: translateY(-10px);
 }
 
@@ -60,16 +75,31 @@ a {
 /* phone sizes */
 @media (max-width: 540px) {
     body {
+        -moz-transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+        -khtml-transform: scale(0.5);
         transform: scale(0.5);
     }
 
     fieldset {
+        -moz-width: 385px;
+        -webkit-width: 385px;
+        -khtml-width: 385px;
         width: 385px;
+        -moz-transform: scale(1.25) translateY(50px);
+        -webkit-transform: scale(1.25) translateY(50px);
+        -khtml-transform: scale(1.25) translateY(50px);
         transform: scale(1.25) translateY(50px);
     }
 
     select {
+        -moz-height: 50px;
+        -webkit-height: 50px;
+        -khtml-height: 50px;
         height: 50px;
+        -moz-transform: translateY(-21px);
+        -webkit-transform: translateY(-21px);
+        -khtml-transform: translateY(-21px);
         transform: translateY(-21px);
     }
 
@@ -79,6 +109,9 @@ a {
 
     button {
         margin: auto;
+        -moz-transform: translateX(125px);
+        -webkit-transform: translateX(125px);
+        -khtml-transform: translateX(125px);
         transform: translateX(125px);
     }
 
@@ -91,14 +124,23 @@ a {
 
 @media (orientation: landscape) and (max-width: 823px) {
     h1 {
+        -moz-transform: translateY(200px) scale(0.75);
+        -webkit-transform: translateY(200px) scale(0.75);
+        -khtml-transform: translateY(200px) scale(0.75);
         transform: translateY(200px) scale(0.75);
     }
 
     canvas {
+        -moz-transform: translateY(50px) scale(0.45);
+        -webkit-transform: translateY(50px) scale(0.45);
+        -khtml-transform: translateY(50px) scale(0.45);
         transform: translateY(50px) scale(0.45);
     }
 
     fieldset {
+        -moz-transform: translateY(-100px) scale(0.75);
+        -webkit-transform: translateY(-100px) scale(0.75);
+        -khtml-transform: translateY(-100px) scale(0.75);
         transform: translateY(-100px) scale(0.75);
     }
 
@@ -110,10 +152,16 @@ a {
 /* galaxy fold fix */
 @media (orientation: landscape) and (width: 653px) and (height: 280px) {
     canvas {
+        -moz-transform: translateY(40px) scale(0.45);
+        -webkit-transform: translateY(40px) scale(0.45);
+        -khtml-transform: translateY(40px) scale(0.45);
         transform: translateY(40px) scale(0.45);
     }
 
     fieldset {
+        -moz-transform: translateY(-115px) scale(0.75);
+        -webkit-transform: translateY(-115px) scale(0.75);
+        -khtml-transform: translateY(-115px) scale(0.75);
         transform: translateY(-115px) scale(0.75);
     }
 }
@@ -121,10 +169,16 @@ a {
 /* nest hub  fix */
 @media (orientation: landscape) and (min-width: 717px) and (max-width: 1366px) {
     h1 {
+        -moz-transform: translateY(100px) scale(0.75);
+        -webkit-transform: translateY(100px) scale(0.75);
+        -khtml-transform: translateY(100px) scale(0.75);
         transform: translateY(100px) scale(0.75);
     }
 
     canvas {
+        -moz-transform: translateY(32px) scale(0.75);
+        -webkit-transform: translateY(32px) scale(0.75);
+        -khtml-transform: translateY(32px) scale(0.75);
         transform: translateY(32px) scale(0.75);
     }
 }
